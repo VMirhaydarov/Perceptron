@@ -14,8 +14,9 @@
     <string name="tv_status_value_studying"> Studying .. </string>
     <string name="tv_status_value_study_ok"> Study - OK</string>
     <string name="tv_status_value_not_found"> Not found</string>
+    <string name="tv_status_value_number_is">Number = </string>
     <string name="app_about_text">
-        Данная программа иллюстрирует работу нейронной сети по распознаванию цифр от нуля до десяти.
+        Данная программа иллюстрирует работу нейронной сети по распознаванию цифр от нуля до девяти.
         На экран выводятся входные данные, результаты умножения входных данных на весовые
         коэффициенты нейронной сети, результирующее значение, которое выбрала сеть.
         При инициализации нейронной сети весовым коэффициентам присваиваются случайные значения от

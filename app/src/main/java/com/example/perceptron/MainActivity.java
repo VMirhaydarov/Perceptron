@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -19,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
     //PerceptronOne perceptron;
     PerceptronTwo perceptron;
+
+    boolean viewIsVertical;
 
     TextView tvStatusValue ;
     TextView tvIterationsValue;
@@ -453,7 +456,7 @@ public class MainActivity extends AppCompatActivity {
         }
         Num = -1;
         double outer_max = 0;
-        for(int num=0;num<perceptron.NUM_VALUE;num++){
+        for(int num = 0; num< PerceptronTwo.NUM_VALUE; num++){
             draw2D.dOutersValue[num] = perceptron.outer_max[num];
             if ((perceptron.outer[num] == 1)&&(perceptron.outer_max[num]>outer_max)) {
                 outer_max = perceptron.outer_max[num];
@@ -465,6 +468,7 @@ public class MainActivity extends AppCompatActivity {
             draw2D.outerValue = "";
         }
         else {
+            String temp = R.string.tv_status_value_number_is + Num.toString();
             tvStatusValue.setText("Number = " + Num.toString());
             draw2D.outerValue = Num.toString();
         }
@@ -586,5 +590,21 @@ public class MainActivity extends AppCompatActivity {
         for(int num=0;num<perceptron.NUM_VALUE;num++)
             draw2D.dOutersValue[num] = perceptron.outer_max[num];
         draw2D.invalidate();
+    }
+
+    private boolean getScreenOrientation(){
+        if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT)
+            return true;
+        else if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE)
+            return false;
+        else
+            return true;
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        viewIsVertical = getScreenOrientation();
+        draw2D.drawIsVertical = viewIsVertical;
     }
 }
