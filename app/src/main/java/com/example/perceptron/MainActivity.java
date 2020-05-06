@@ -469,7 +469,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
             String temp = R.string.tv_status_value_number_is + Num.toString();
-            tvStatusValue.setText("Number = " + Num.toString());
+            tvStatusValue.setText("Цифра = " + Num.toString());
             draw2D.outerValue = Num.toString();
         }
         btnStudyWrong.setEnabled(true);
@@ -566,11 +566,11 @@ public class MainActivity extends AppCompatActivity {
                         }
                         else {
                             Num = Integer.parseInt(numbers[which]);
-                            tvStatusValue.setText("Number = " + Num.toString());
+                            tvStatusValue.setText("Цифра = " + Num.toString());
                         }
                         perceptron.studyWrong(numOld);
                         perceptron.studyWright(Num);
-                        for(int num=0;num<perceptron.NUM_VALUE;num++)
+                        for(int num=0;num<PerceptronTwo.NUM_VALUE;num++)
                             draw2D.dOutersValue[num] = perceptron.outer_max[num];
                         draw2D.invalidate();
                         Toast.makeText(getApplicationContext(),"Весовые коэффициенты пересчитаны",Toast.LENGTH_LONG).show();
@@ -584,10 +584,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void btnStudyRightClick(View view) {
         perceptron.studyWright(Num);
+        //Toast.makeText(this, "Num = " + Num.toString(), Toast.LENGTH_LONG).show();
         Toast.makeText(this,"Весовые коэффициенты пересчитаны",Toast.LENGTH_LONG).show();
         iterations++;
         tvIterationsValue.setText(iterations.toString());
-        for(int num=0;num<perceptron.NUM_VALUE;num++)
+        for(int num=0;num<PerceptronTwo.NUM_VALUE;num++)
             draw2D.dOutersValue[num] = perceptron.outer_max[num];
         draw2D.invalidate();
     }

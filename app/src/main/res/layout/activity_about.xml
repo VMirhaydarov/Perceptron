@@ -8,7 +8,7 @@
     android:text="@string/app_about_text"
     android:textSize="18sp"
     android:textStyle="bold"
-    android:textAlignment="center"
+    android:textAlignment="gravity"
     android:layout_gravity="center_horizontal"
     android:layout_marginTop="10dp"
     android:layout_marginLeft="10dp"
@@ -16,5 +16,4 @@
     android:layout_marginBottom="10dp"
     android:background="@drawable/rounded"
     >
-
 </TextView>

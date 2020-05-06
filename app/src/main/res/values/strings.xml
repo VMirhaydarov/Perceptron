@@ -3,18 +3,18 @@
     <string name="app_about">О программе</string>
     <string name="btn_get_result_text">Распознать цифру</string>
     <string name="btn_get_result_land_text">Распознать \nцифру</string>
-    <string name="tv_status_text">Status : </string>
-    <string name="tv_iterations_text">Iterations: </string>
+    <string name="tv_status_text">Статус: </string>
+    <string name="tv_iterations_text">Итерации: </string>
     <string name="btn_clear_text">Очистить экран</string>
     <string name="btn_clear_land_text">Очистить \nэкран</string>
     <string name="btn_study_wrong_text">Цифра неправильная</string>
     <string name="btn_study_wrong_land_text">Цифра \nнеправильная</string>
     <string name="btn_study_right_text">Цифра правильная</string>
     <string name="btn_study_right_land_text">Цифра \nправильная</string>
-    <string name="tv_status_value_studying"> Studying .. </string>
-    <string name="tv_status_value_study_ok"> Study - OK</string>
+    <string name="tv_status_value_studying"> Обучение .. </string>
+    <string name="tv_status_value_study_ok"> OK</string>
     <string name="tv_status_value_not_found"> Not found</string>
-    <string name="tv_status_value_number_is">Number = </string>
+    <string name="tv_status_value_number_is">Цифра = </string>
     <string name="app_about_text">
         Данная программа иллюстрирует работу нейронной сети по распознаванию цифр от нуля до девяти.
         На экран выводятся входные данные, результаты умножения входных данных на весовые
@@ -25,7 +25,7 @@
         распознавания пользователь имеет возможность выбрать правильный вариант, при этом весовые
         коэффициенты будут пересчитаны: для неправильной цифры весовые коэффициенты сработавших сенсоров
         уменьшатся, а для правильной цифры увеличатся. Таким образом, пользователь имеет возможность
-        обучать нейронную сеть. Приятного использования программой!\n\n
+        обучать нейронную сеть. Приятного пользования программой!\n\n
         email: vmirhaydarov@yandex.ru
     </string>
 
