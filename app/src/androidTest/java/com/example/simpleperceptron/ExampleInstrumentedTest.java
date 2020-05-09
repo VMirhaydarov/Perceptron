@@ -1,4 +1,4 @@
-package com.example.perceptron;
+package com.example.simpleperceptron;
 
 import android.content.Context;
 

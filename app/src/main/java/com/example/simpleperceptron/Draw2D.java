@@ -1,4 +1,4 @@
-package com.example.perceptron;
+package com.example.simpleperceptron;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -6,7 +6,6 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 

@@ -275,7 +275,7 @@
         android:onClick="btnStudyWrongClick"
         />
 
-    <com.example.perceptron.Draw2D
+    <com.example.simpleperceptron.Draw2D
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/draw2D"
@@ -286,7 +286,7 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/black_border">
-    </com.example.perceptron.Draw2D>
+    </com.example.simpleperceptron.Draw2D>
 
 
 </RelativeLayout>
