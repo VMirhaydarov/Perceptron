@@ -16,8 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.simpleperceptron.ActivityAbout"
+        <activity android:name="com.example.simpleperceptron.AboutActivity"
             android:label="@string/app_about">
+        </activity>
+        <activity android:name=".SettingsActivity"
+            android:label="@string/app_settings">
         </activity>
     </application>
 
