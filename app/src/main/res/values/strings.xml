@@ -1,10 +1,11 @@
 <resources>
     <string name="app_name">SimplePerceptron</string>
     <string name="app_about">О программе</string>
+    <string name="app_settings">Настройки</string>
     <string name="btn_get_result_text">Распознать цифру</string>
     <string name="btn_get_result_land_text">Распознать \nцифру</string>
-    <string name="tv_status_text">Статус: </string>
-    <string name="tv_iterations_text">Итерации: </string>
+    <string name="tv_status_text">Статус:\u0020</string>
+    <string name="tv_iterations_text">Итерации:\u0020</string>
     <string name="btn_clear_text">Очистить экран</string>
     <string name="btn_clear_land_text">Очистить \nэкран</string>
     <string name="btn_study_wrong_text">Цифра неправильная</string>
@@ -14,9 +15,12 @@
     <string name="tv_status_value_studying"> Обучение .. </string>
     <string name="tv_status_value_study_ok"> OK</string>
     <string name="tv_status_value_not_found"> Not found</string>
-    <string name="tv_status_value_number_is">Цифра = </string>
+    <string name="tv_status_value_number_is">Цифра =\u0020</string>
+    <string name="tv_threshold">Пороговое значение:\u0020</string>
+    <string name="tv_correct_rate">Коректирующий коэффициент:\u0020</string>
     <string name="app_about_text">
-        Данная программа иллюстрирует работу нейронной сети по распознаванию цифр от нуля до девяти.
+        Данная программа иллюстрирует работу простейшей нейронной сети на примере нейронов
+        по распознаванию цифр от нуля до девяти.
         C помощью кнопок на поле 3x5 пользователь рисует цифру, там самым задавая данные для
         входных сенсоров нейронной сети. Сработавшие входные сенсоры на рисунке изображены красным цветом.
         При нажатии на кнопку "Распознать цифру" программа
