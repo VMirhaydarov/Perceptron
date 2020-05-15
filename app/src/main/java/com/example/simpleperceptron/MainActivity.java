@@ -18,8 +18,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    //PerceptronOne perceptron;
-    PerceptronTwo perceptron;
+    Perceptron perceptron;
 
     boolean viewIsVertical;
 
@@ -74,8 +73,12 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.menu_about:
-                Intent intent = new Intent(this, ActivityAbout.class);
-                startActivity(intent);
+                Intent intent_about = new Intent(this, AboutActivity.class);
+                startActivity(intent_about);
+                break;
+            case (R.id.menu_settings):
+                Intent intent_settings = new Intent(this,SettingsActivity.class);
+                startActivity(intent_settings);
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -87,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //perceptron = new PerceptronOne();
-        perceptron = new PerceptronTwo();
+        perceptron = new Perceptron();
 
         tvStatusValue = findViewById(R.id.tv_status_value);
         tvIterationsValue = findViewById(R.id.tv_iterations_value);
@@ -456,7 +459,7 @@ public class MainActivity extends AppCompatActivity {
         }
         Num = -1;
         double outer_max = 0;
-        for(int num = 0; num< PerceptronTwo.NUM_VALUE; num++){
+        for(int num = 0; num< Perceptron.NUM_VALUE; num++){
             draw2D.dOutersValue[num] = perceptron.outer_max[num];
             if ((perceptron.outer[num] == 1)&&(perceptron.outer_max[num]>outer_max)) {
                 outer_max = perceptron.outer_max[num];
@@ -570,7 +573,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                         perceptron.studyWrong(numOld);
                         perceptron.studyWright(Num);
-                        for(int num=0;num<PerceptronTwo.NUM_VALUE;num++)
+                        for(int num = 0; num< Perceptron.NUM_VALUE; num++)
                             draw2D.dOutersValue[num] = perceptron.outer_max[num];
                         draw2D.invalidate();
                         Toast.makeText(getApplicationContext(),"Весовые коэффициенты пересчитаны",Toast.LENGTH_LONG).show();
@@ -588,7 +591,7 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this,"Весовые коэффициенты пересчитаны",Toast.LENGTH_LONG).show();
         iterations++;
         tvIterationsValue.setText(iterations.toString());
-        for(int num=0;num<PerceptronTwo.NUM_VALUE;num++)
+        for(int num = 0; num< Perceptron.NUM_VALUE; num++)
             draw2D.dOutersValue[num] = perceptron.outer_max[num];
         draw2D.invalidate();
     }

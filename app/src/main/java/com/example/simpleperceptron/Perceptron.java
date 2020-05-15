@@ -2,9 +2,10 @@ package com.example.simpleperceptron;
 
 import android.util.Log;
 
-public class PerceptronTwo{
+public class Perceptron {
 
     public static final int NUM_VALUE = 10;
+    public static final double THRESHOLD_VALUE = 0.6;
 
     double[] enters;
     //double[] hidden;
@@ -27,6 +28,7 @@ public class PerceptronTwo{
     double[] pattern_num_7 = {1,1,1,0,0,1,0,0,1,0,0,1,0,0,1};
     double[] pattern_num_8 = {1,1,1,1,0,1,1,1,1,1,0,1,1,1,1};
     double[] pattern_num_9 = {1,1,1,1,0,1,1,1,1,0,0,1,1,1,1};*/
+
     /*
             {1,1,1,1,0,0,0,1,0,0,0,1,1,1,1}, // 5
             {1,1,1,1,0,0,0,1,1,0,0,1,1,1,1}, // 5
@@ -69,7 +71,7 @@ public class PerceptronTwo{
             {0,0,0,0,0,0,0,0,0,1, 0},// 0,0}, // 9
     };
 
-    public PerceptronTwo() {
+    public Perceptron() {
         enters = new double[patterns[0].length];
         weights = new double[NUM_VALUE][enters.length];
         for(int num = 0; num <NUM_VALUE;num++) {
@@ -89,7 +91,7 @@ public class PerceptronTwo{
             for (int i = 0; i < enters.length; i++) {
                 outer[num] += enters[i] * weights[num][i];
             }
-            if (outer[num]>=0.6) {
+            if (outer[num]>=THRESHOLD_VALUE) {
                 outer_max[num] = outer[num];
                 outer[num] = 1;
             }
@@ -130,7 +132,7 @@ public class PerceptronTwo{
         Integer Num = num;
         if(Num == -1) return;
         for(int i=0;i<enters.length;i++){
-            if (enters[i]==1) weights[Num][i] -= 0.02;
+            if (enters[i]==1) weights[Num][i] -= 0.01;
         }
         countOuter();
     }
@@ -139,7 +141,7 @@ public class PerceptronTwo{
         Integer Num = num;
         if(Num == -1) return;
         for(int i=0;i<enters.length;i++){
-            if (enters[i]==1) weights[Num][i] += 0.02;
+            if (enters[i]==1) weights[Num][i] += 0.01;
         }
         countOuter();
     }
