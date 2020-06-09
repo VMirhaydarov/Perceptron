@@ -19,6 +19,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     Perceptron perceptron;
+    //MLP perceptron;
 
     boolean viewIsVertical;
 
@@ -89,8 +90,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //perceptron = new PerceptronOne();
         perceptron = new Perceptron();
+        //perceptron = new MLP();
 
         tvStatusValue = findViewById(R.id.tv_status_value);
         tvIterationsValue = findViewById(R.id.tv_iterations_value);
@@ -471,7 +472,7 @@ public class MainActivity extends AppCompatActivity {
             draw2D.outerValue = "";
         }
         else {
-            String temp = R.string.tv_status_value_number_is + Num.toString();
+            String temp = R.string.tv_status_value_number_is + Num.toString(); // !!! Исправить
             tvStatusValue.setText("Цифра = " + Num.toString());
             draw2D.outerValue = Num.toString();
         }
