@@ -1,4 +1,4 @@
-package com.example.simpleperceptron;
+package com.chance.simpleperceptron;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
     TextView tvIterationsValue;
     Button btnStudyRight;
     Button btnStudyWrong;
-    Draw2D draw2D;
+    //Draw2D draw2D;
+    Draw draw2D;
 
     Integer Num;
     Integer iterations;
@@ -77,10 +78,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent_about = new Intent(this, AboutActivity.class);
                 startActivity(intent_about);
                 break;
-            case (R.id.menu_settings):
+            /*case (R.id.menu_settings):
                 Intent intent_settings = new Intent(this,SettingsActivity.class);
                 startActivity(intent_settings);
-                break;
+                break;*/
         }
         return super.onOptionsItemSelected(item);
     }

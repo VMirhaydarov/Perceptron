@@ -1,4 +1,4 @@
-package com.example.simpleperceptron;
+package com.chance.simpleperceptron;
 
 import android.app.Activity;
 import android.os.Bundle;
